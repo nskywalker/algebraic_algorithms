@@ -5,11 +5,24 @@
 void test_powing()
 {
     std::println("powing:");
-    show_powing(2, 4);
-    show_powing(5, 2);
-    show_powing(3, 2);
-    show_powing(4, 4);
-    show_powing(5, 4);
+    const auto f = &iterative_pow;
+    show_powing(2, 4, f);
+    show_powing(5, 2, f);
+    show_powing(3, 2, f);
+    show_powing(4, 4, f);
+    show_powing(5, 4, f);
+    std::println("");
+}
+
+void test_two_powing()
+{
+    std::println("two powing:");
+    const auto f = &two_pow;
+    show_powing(2, 4, f);
+    show_powing(5, 2, f);
+    show_powing(3, 2, f);
+    show_powing(4, 4, f);
+    show_powing(5, 4, f);
     std::println("");
 }
 
@@ -41,11 +54,23 @@ void test_prime_number()
     std::println("");
 }
 
-int main()
+void junior_level()
 {
+    std::println("junior_level:");
     test_powing();
     test_iterative_fibonacci();
     test_recursive_fibonacci();
     test_prime_number();
+}
+
+void middle_level()
+{
+    std::println("middle_level:");
+    test_two_powing();
+}
+
+int main()
+{
+    middle_level();
     return 0;
 }

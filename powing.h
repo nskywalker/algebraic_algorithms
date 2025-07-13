@@ -9,9 +9,13 @@
 #include <iostream>
 #include <print>
 
+using PowFunc = double (*)(double, uint32_t);
+
 double iterative_pow(double num, uint32_t power);
 
-void show_powing(double num, uint32_t power);
+double two_pow(double num, uint32_t power);
+
+void show_powing(double num, uint32_t power, PowFunc func);
 
 
 #endif //POWING_H

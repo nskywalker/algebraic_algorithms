@@ -3,6 +3,8 @@ project(algebraic_algorithms)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(algebraic_algorithms powing.cpp main.cpp)
+add_executable(algebraic_algorithms powing.cpp main.cpp
+        fibonacci.cpp
+        fibonacci.h)
 
 target_link_libraries(algebraic_algorithms PRIVATE stdc++exp)

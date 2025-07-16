@@ -1,3 +1,4 @@
+#include "eratosphen.h"
 #include "powing.h"
 #include "fibonacci.h"
 #include "prime_number.h"
@@ -64,6 +65,17 @@ void test_prime_number()
     std::println("");
 }
 
+void test_eratosphen()
+{
+    std::println("eratosphen:");
+    auto f = &eratosphen;
+    show_eratosphen(10, f);
+    show_eratosphen(100, f);
+    show_eratosphen(1000, f);
+    show_eratosphen(10000, f);
+    std::println("");
+}
+
 void junior_level()
 {
     std::println("junior_level:");
@@ -78,6 +90,7 @@ void middle_level()
     std::println("middle_level:");
     test_two_powing();
     test_fibonacci_gold();
+    test_eratosphen();
 }
 
 int main()

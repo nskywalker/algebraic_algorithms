@@ -6,6 +6,7 @@
 
 double iterative_pow(const double num, const uint32_t power)
 {
+    if (power == 0) return 1;
     double result = num;
     for (auto i = 1u; i < power; ++i)
     {
@@ -27,10 +28,6 @@ double two_pow(double num, uint32_t power)
 
 void show_powing(double num, uint32_t power, PowFunc func)
 {
-    if (func != &two_pow && func != &iterative_pow)
-    {
-        return;
-    }
     std::println(std::cout, "{}^{} = {}", num, power, func(num, power));
 }
 

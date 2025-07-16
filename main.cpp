@@ -44,6 +44,16 @@ void test_recursive_fibonacci()
     std::println("");
 }
 
+void test_fibonacci_gold()
+{
+    std::println("fibonacci_gold:");
+    auto f = &fibonacci_gold;
+    show_fibonacci(2, &fibonacci_gold);
+    show_fibonacci(5, &fibonacci_gold);
+    show_fibonacci(40, &fibonacci_gold);
+    std::println("");
+}
+
 void test_prime_number()
 {
     std::println("prime_number:");
@@ -67,6 +77,7 @@ void middle_level()
 {
     std::println("middle_level:");
     test_two_powing();
+    test_fibonacci_gold();
 }
 
 int main()

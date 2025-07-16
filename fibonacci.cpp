@@ -21,11 +21,13 @@ unsigned long recursive_fibonacci(const unsigned long n)
     return n == 1 || n == 2 ? 1 : recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2);
 }
 
+unsigned long fibonacci_gold(unsigned long n)
+{
+    const auto fi = (1.0 + std::sqrt(5)) / 2.0;
+    return static_cast<unsigned long>(std::floor(std::pow(fi, n) / std::sqrt(5) + 1.0 / 2.0));
+}
+
 void show_fibonacci(const unsigned long n, FibFunc func)
 {
-    if (func != &recursive_fibonacci && func != &iterative_fibonacci)
-    {
-        return;
-    }
     std::println(std::cout, "F({}) = {}",  n, func(n));
 }

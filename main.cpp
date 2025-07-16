@@ -76,6 +76,17 @@ void test_eratosphen()
     std::println("");
 }
 
+void test_eratosphen_linear()
+{
+    std::println("eratosphen linear:");
+    auto f = &eratosphen_linear;
+    show_eratosphen(10, f);
+    show_eratosphen(100, f);
+    show_eratosphen(1000, f);
+    show_eratosphen(10000, f);
+    std::println("");
+}
+
 void junior_level()
 {
     std::println("junior_level:");
@@ -91,6 +102,7 @@ void middle_level()
     test_two_powing();
     test_fibonacci_gold();
     test_eratosphen();
+    test_eratosphen_linear();
 }
 
 int main()
